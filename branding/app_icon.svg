@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <defs>
+    <!-- Purple → magenta → pink gradient -->
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"  stop-color="#7C4DFF"/>
+      <stop offset="45%" stop-color="#D946EF"/>
+      <stop offset="100%" stop-color="#FF4081"/>
+    </linearGradient>
+
+    <!-- Same gradient, rotated for the spiral so colors sweep around -->
+    <linearGradient id="gradB" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"  stop-color="#FF4081"/>
+      <stop offset="50%" stop-color="#BA38FF"/>
+      <stop offset="100%" stop-color="#7C4DFF"/>
+    </linearGradient>
+
+    <!-- Soft halo glow behind everything -->
+    <radialGradient id="halo" cx="50%" cy="50%" r="55%">
+      <stop offset="0%"   stop-color="#9B33FF" stop-opacity="0.35"/>
+      <stop offset="55%"  stop-color="#FF4081" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="10" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="strongGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+
+    <clipPath id="rounded">
+      <rect width="1024" height="1024" rx="224" ry="224"/>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#rounded)">
+    <!-- Pure black background -->
+    <rect width="1024" height="1024" fill="#000000"/>
+
+    <!-- Halo glow layer -->
+    <rect width="1024" height="1024" fill="url(#halo)"/>
+
+    <!-- Outer faint spiral echo for depth -->
+    <g transform="translate(512 512) rotate(20)" fill="none"
+       stroke="url(#gradB)" stroke-width="6" stroke-linecap="round"
+       opacity="0.35" filter="url(#strongGlow)">
+      <path d="
+        M 0 -100
+        A 110 110 0 0 1 120 0
+        A 135 135 0 0 1 0 150
+        A 170 170 0 0 1 -190 0
+        A 215 215 0 0 1 0 -240
+        A 270 270 0 0 1 305 0
+        A 335 335 0 0 1 0 365
+        A 400 400 0 0 1 -440 0
+      "/>
+    </g>
+
+    <!-- Main spiral, sharp -->
+    <g transform="translate(512 512)" fill="none"
+       stroke="url(#grad)" stroke-width="18" stroke-linecap="round" filter="url(#glow)">
+      <path d="
+        M 0 -80
+        A 90 90 0 0 1 100 0
+        A 115 115 0 0 1 0 130
+        A 150 150 0 0 1 -170 0
+        A 195 195 0 0 1 0 -220
+        A 250 250 0 0 1 280 0
+        A 310 310 0 0 1 0 340
+        A 380 380 0 0 1 -420 0
+      "/>
+    </g>
+
+    <!-- Bold X centered, big gradient strokes -->
+    <g transform="translate(512 512)" stroke="url(#grad)"
+       stroke-width="76" stroke-linecap="round" filter="url(#glow)">
+      <line x1="-150" y1="-150" x2="150" y2="150"/>
+      <line x1="150"  y1="-150" x2="-150" y2="150"/>
+    </g>
+
+    <!-- Subtle inner highlight on the X for depth -->
+    <g transform="translate(512 512)" stroke="#FFFFFF"
+       stroke-width="12" stroke-linecap="round" opacity="0.35">
+      <line x1="-140" y1="-140" x2="-40" y2="-40"/>
+      <line x1="140"  y1="-140" x2="40"  y2="-40"/>
+    </g>
+  </g>
+</svg>

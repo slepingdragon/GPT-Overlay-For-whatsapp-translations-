@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <defs>
+    <clipPath id="rounded">
+      <rect width="1024" height="1024" rx="224" ry="224"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#rounded)">
+    <rect width="1024" height="1024" fill="#000000"/>
+
+    <!-- Spiral, mono -->
+    <g transform="translate(512 512)" fill="none"
+       stroke="#FFFFFF" stroke-width="18" stroke-linecap="round" opacity="0.85">
+      <path d="
+        M 0 -80
+        A 90 90 0 0 1 100 0
+        A 115 115 0 0 1 0 130
+        A 150 150 0 0 1 -170 0
+        A 195 195 0 0 1 0 -220
+        A 250 250 0 0 1 280 0
+        A 310 310 0 0 1 0 340
+        A 380 380 0 0 1 -420 0
+      "/>
+    </g>
+
+    <!-- Bold X -->
+    <g transform="translate(512 512)" stroke="#FFFFFF"
+       stroke-width="76" stroke-linecap="round">
+      <line x1="-150" y1="-150" x2="150" y2="150"/>
+      <line x1="150"  y1="-150" x2="-150" y2="150"/>
+    </g>
+  </g>
+</svg>

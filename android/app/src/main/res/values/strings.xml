@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Translate</string>
+    <string name="share_label">Translate (EN/ID)</string>
+
+    <string name="source_hint">Type a message…</string>
+    <string name="result_placeholder">Translation appears here</string>
+    <string name="copy">Copy</string>
+    <string name="copied">Copied to clipboard</string>
+    <string name="open_whatsapp">Open WhatsApp</string>
+    <string name="send_to_whatsapp">Send via WhatsApp</string>
+    <string name="swap">Swap</string>
+    <string name="clear">Clear</string>
+
+    <string name="settings">Settings</string>
+    <string name="api_key_label">DeepL API key</string>
+    <string name="api_key_hint">Paste your DeepL Free key here</string>
+    <string name="save">Save</string>
+    <string name="test_key">Test key</string>
+    <string name="missing_key">Missing DeepL API key — open settings.</string>
+    <string name="contact_label">Default WhatsApp contact</string>
+    <string name="contact_hint">+62 812 3456 7890 (country code required)</string>
+    <string name="contact_help">Optional. If set, Send-via-WhatsApp opens this chat directly with the translation pre-filled — no chat picker.</string>
+
+    <string name="theme_section">Theme</string>
+    <string name="pick_image">Choose background image</string>
+    <string name="change_image">Change image</string>
+    <string name="remove_image">Remove image</string>
+    <string name="copy_button_color">Copy button color</string>
+    <string name="send_button_color">Send button color</string>
+    <string name="input_box_color">Message box color</string>
+    <string name="custom_hex">Custom hex</string>
+    <string name="favorites_section">Favorites</string>
+    <string name="no_translations_yet">Your translations show up here</string>
+    <string name="auto_translate">Auto-translate while typing</string>
+    <string name="auto_translate_help">Off: tap the Translate button inside the result box to translate.</string>
+    <string name="translate_action">Translate</string>
+    <string name="pick_color">Pick color</string>
+    <string name="ui_opacity">UI transparency</string>
+    <string name="ui_opacity_help">How opaque buttons and the message box are on top of the background image.</string>
+    <string name="open_color_wheel">Open color wheel</string>
+
+    <string name="history">History</string>
+    <string name="all">All</string>
+    <string name="favorites_only">Favorites</string>
+    <string name="favorite">Favorite</string>
+    <string name="unfavorite">Unfavorite</string>
+    <string name="delete">Delete</string>
+    <string name="clear_field">Clear text</string>
+    <string name="empty_history">No history yet — tap Copy or Send via WhatsApp on a translation to save it here.</string>
+    <string name="empty_favorites">No favorites yet — tap the heart on any history entry to favorite it.</string>
+    <string name="clear_history">Clear all history</string>
+    <string name="confirm_clear">Delete all history? This cannot be undone.</string>
+</resources>

@@ -1,0 +1,37 @@
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+*.iml
+*.swp
+*.swo
+
+# Android build / IDE / SDK paths
+android/.gradle/
+android/build/
+android/.idea/
+android/local.properties
+android/app/build/
+android/app/release/
+android/.cxx/
+android/captures/
+
+# iOS — Xcode generates these locally
+ios/**/xcuserdata/
+ios/**/*.xcuserstate
+ios/**/DerivedData/
+ios/**/build/
+*.ipa
+*.dSYM.zip
+
+# Dev tools — user-uploaded screenshots stay local
+_dev/uploads/
+_dev/__pycache__/
+
+# BMAD scaffolding artifacts — generated, not source
+_bmad-output/
+_bmad/_config/
